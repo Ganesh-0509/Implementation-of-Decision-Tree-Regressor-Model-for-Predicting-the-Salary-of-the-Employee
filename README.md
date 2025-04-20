@@ -35,7 +35,7 @@ RegisterNumber:  212224240043
 ```
 import pandas as pd
 
-data = pd.read_csv("Salary.csv")
+data = pd.read_csv("/content/Salary.csv")
 
 data.head()
 
@@ -57,7 +57,7 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
 from sklearn.tree import DecisionTreeRegressor
 dt = DecisionTreeRegressor()
 dt.fit(x_train, y_train)
-y_pred = df.predict(x_test)
+y_pred = dt.predict(x_test)
 
 from sklearn import metrics
 mse = metrics.mean_squared_error(y_test, y_pred)
